@@ -7,7 +7,7 @@
   <title>HTML/CSS 과제</title>
   <style>
     body {
-      position:relative;
+      position: relative;
       margin: 0;
       padding: 0;
       font-family: 'Noto Sans KR', sans-serif;
@@ -19,7 +19,7 @@
     }
 
     .profile-card {
-      position:relative;
+      position: relative;
       background: white;
       border-radius: 20px;
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -37,10 +37,11 @@
       border: 5px solid #f0f0f0;
     }
 
-    .profile-image:hover{
-      transition:transform 0.1s linear;
-      transform:scale(1.1);
+    .profile-image:hover {
+      transition: transform 0.1s linear;
+      transform: scale(1.1);
     }
+
     .name {
       font-size: 1.5rem;
       font-weight: bold;
@@ -53,8 +54,9 @@
       line-height: 1.6;
       margin-bottom: 1.5rem;
     }
-    .text-p{
-      color:rgb(139, 120, 12);
+
+    .text-p {
+      color: rgb(139, 120, 12);
     }
 
     .homework-links {
@@ -68,21 +70,21 @@
 
     .homework-links li {
       width: 50%;
-      line-height:20px;      
+      line-height: 20px;
     }
 
     .homework-links a {
-      font-weight:bold;
+      font-weight: bold;
       display: inline-block;
-      width:100px;
-      height:20px;
+      width: 100px;
+      height: 20px;
       color: #555;
       text-decoration: none;
       transition: color 0.3s ease;
-      border-radius:5px;
-      padding:5px;
-      background:rgba(0, 0, 0, 0.1);
-      margin-block:5px;
+      border-radius: 5px;
+      padding: 5px;
+      background: rgba(0, 0, 0, 0.1);
+      margin-block: 5px;
       box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
     }
 
@@ -90,18 +92,40 @@
       color: #007bff;
     }
 
-    .anchor:hover{
-      transition:all 0.5s linear;
-      transform:scale(1.1);
-      }
-      video {
-        width:100vw;
-        height:100vh;
-        position:absolute;
-        opacity:0.2;
-        object-fit: cover;
+    .anchor:hover {
+      transition: all 0.5s linear;
+      transform: scale(1.1);
+    }
 
-      }
+    video {
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      opacity: 0.2;
+      object-fit: cover;
+
+    }
+
+    .run {
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      right: 0px;
+      bottom: 0px;
+      animation: run linear 7s infinite;
+    }
+
+    @keyframes run {
+      0%  {opacity: 0;right: 0%;}
+      10% {opacity: 0;right: 10%;}
+      15% {opacity: 1;right: 15%;}
+      25% {opacity: 1;right: 25%;}
+      50% { opacity: 1;right: 50%;}
+      75% {opacity: 1;right: 70%;}
+      90% {opacity: 0;right: 90%;}
+      100% {opacity: 0;right: 100%;}
+
+    }
   </style>
 
 
@@ -109,23 +133,28 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 </head>
 
-  <video muted autoplay loop src="./src/assets/rain.mp4" alt="" /></video>
+<video muted autoplay loop src="./src/assets/rain.mp4" alt="" /></video>
 
-  <div class="profile-card">
+<div class="profile-card">
 
-    <!-- 상대 경로로 이미지 삽입하기 -->
-    <img src="./src/assets/naruto.jpg" alt="나루토" class="profile-image" />
-    <h1 class="name">이희륜</h1>
-    <p class="bio">멋사 프론트엔드 부트캠프 14기 <b></b></p>
-    <p class="text-p">과제 결과는 링크를 선택해주세요.</p>
-    <ul class="homework-links">
-      <li><a class="anchor" href="./src/md/markdown.md">마크다운 문법</a></li>
-      <li><a class="anchor" href=./src/avatars/avatars.html>아바타</a></li>
-      <li><a class="anchor" href="./src/md/week1-retrospect.md">1주차 회고</a></li>
-      <li><a class="anchor" href="./src/md/week2-retrospect.md">2주차 회고</a></li>
-      
-    </ul>
+  <!-- 상대 경로로 이미지 삽입하기 -->
+  <img src="./src/assets/naruto.jpg" alt="나루토" class="profile-image" />
+  <h1 class="name">이희륜</h1>
+  <p class="bio">멋사 프론트엔드 부트캠프 14기 <b></b></p>
+  <p class="text-p">과제 결과는 링크를 선택해주세요.</p>
+  <ul class="homework-links">
+    <li><a class="anchor" href="./src/md/markdown.md">마크다운 문법</a></li>
+    <li><a class="anchor" href=./src/avatars/avatars.html>아바타</a></li>
+    <li><a class="anchor" href="./src/md/week1-retrospect.md">1주차 회고</a></li>
+    <li><a class="anchor" href="./src/md/week2-retrospect.md">2주차 회고</a></li>
+
+  </ul>
+
+  <div class="animation-image">
+    <img src="src/assets/naruto-run.png" class="run">
   </div>
+
+</div>
 </body>
 
 </html>
