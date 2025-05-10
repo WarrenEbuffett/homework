@@ -63,3 +63,8 @@ i.on, i.off {
  i.off{
   background:#dbdbdb;
 }
+
+.home-icon{
+  position:relative;
+  top:70px;
+}
