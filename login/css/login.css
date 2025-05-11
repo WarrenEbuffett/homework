@@ -1,0 +1,72 @@
+body{
+  position:relative;
+}
+.logo{
+  margin-left: 130px;
+  margin-bottom: 20px;
+}
+.input{
+  width:500px;
+  height:45px;
+  margin-block: 5px;
+  padding:14px;
+}
+
+.login-btn{
+  width:500px;
+  height:45px;
+  background: rgb(18, 204, 74);
+  border: none;
+  color:white;
+  margin-bottom:5px;
+}
+
+.login-off{
+  position:relative;
+  top:-6px;
+  margin-left: 3px;
+}
+
+.login-image{
+  cursor:pointer;
+}
+.status{
+  display:flex;
+}
+
+.ip{
+  margin-left: 280px;
+}
+.off{
+  color:red;
+}
+.se{
+  color:#121212;
+}
+
+@media screen and (max-width:769px){
+  .container{
+    width:500px;
+  }
+  .blind{
+    display:none;
+  }
+  .ip{
+    margin-left: 420px;
+  }
+}
+.check{
+  display:inline-block;
+}
+
+input:placeholder-shown + .er {
+  color:rgba(255, 0, 0, 0.64);
+  font-size: 13px;
+  margin-top:-5px;
+  display: block;
+}
+
+input:not(:placeholder-shown):valid + .er {
+  display: none;
+}
+
